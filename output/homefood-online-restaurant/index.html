@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HomeFood - Authentic South Indian Veg Home Style Food</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white shadow-md z-50">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <h1 class="text-3xl font-extrabold text-green-700">HomeFood</h1>
+            <button id="menu-btn" aria-label="Toggle mobile menu" class="md:hidden focus:outline-none focus:ring-2 focus:ring-green-600">
+                <svg class="w-8 h-8 text-green-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+            <ul id="menu" class="hidden md:flex gap-8 font-semibold text-green-700">
+                <li><a href="#about" class="hover:text-green-900 transition">About</a></li>
+                <li><a href="#menu-section" class="hover:text-green-900 transition">Menu</a></li>
+                <li><a href="#order" class="hover:text-green-900 transition">Order</a></li>
+                <li><a href="#contact" class="hover:text-green-900 transition">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-16 px-6 bg-gradient-to-r from-green-100 via-green-50 to-white">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="text-5xl md:text-6xl font-extrabold mb-6 text-green-700">
+                Experience Authentic South Indian Veg Home-Style Food
+            </h2>
+            <p class="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto mb-10">
+                Welcome to HomeFood, where tradition meets taste! Delight your senses with our lovingly prepared South Indian vegetarian dishes made the way they were intended – fresh, wholesome, and full of rich flavors.
+            </p>
+            <a href="#menu-section" class="inline-block bg-green-700 text-white px-10 py-4 rounded-xl font-semibold text-lg shadow-lg hover:bg-green-800 transition">
+                Explore Our Menu
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="max-w-5xl mx-auto px-6 py-20">
+        <h3 class="text-4xl font-extrabold text-center text-green-700 mb-12">About HomeFood</h3>
+        <div class="space-y-8 text-gray-700 text-lg leading-relaxed">
+            <p>
+                At HomeFood, we celebrate the rich heritage of South Indian vegetarian cuisine, crafted lovingly in the traditional homemade style. Every dish is a journey back to the authentic flavors and aromas you’d find in a warm family kitchen, where every ingredient tells a story and every bite bursts with freshness.
+            </p>
+            <p>
+                Our menu is carefully curated to bring you a wide array of classic dishes — from fluffy idlis and crispy dosas to flavorful sambar and chutneys made from freshly ground spices. We use only the finest locally sourced ingredients, ensuring that every meal is not just delicious but also nourishing and wholesome.
+            </p>
+            <p>
+                Food quality and purity are at the heart of everything we do. Our recipes are passed down through generations and prepared with utmost care, without any artificial preservatives or additives. We believe that true culinary richness comes from nature’s bounty, skillful preparation, and dedication to authenticity.
+            </p>
+            <p>
+                Whether you’re craving a comforting home-cooked meal or exploring the vibrant tastes of South Indian cuisine for the first time, HomeFood promises a delightful experience that feels just like home — warm, hearty, and unforgettable.
+            </p>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu-section" class="bg-green-50 py-20 px-6">
+        <div class="max-w-7xl mx-auto">
+            <h3 class="text-4xl font-extrabold text-center text-green-700 mb-16">Our Menu</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <article class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+                    <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=600&q=80" alt="Soft Idli with Sambar" loading="lazy" class="rounded-lg mb-4 w-full h-48 object-cover" />
+                    <h4 class="text-2xl font-semibold mb-2">Soft Idli with Sambar</h4>
+                    <p class="text-gray-600 mb-4">Steamed rice cakes served with spicy lentil sambar and coconut chutney, a quintessential South Indian breakfast.</p>
+                    <p class="font-bold text-green-700 text-xl">₹80</p>
+                    <button data-dish="Soft Idli with Sambar" data-price="80" class="add-to-cart mt-4 w-full bg-green-700 text-white py-3 rounded-lg hover:bg-green-800 transition font-semibold focus:outline-none focus:ring-2 focus:ring-green-600" aria-label="Add Soft Idli with Sambar to cart">
+                        Add to Cart
+                    </button>
+                </article>
+
+                <article class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+                    <img src="https://images.unsplash.com/photo-1543352634-3e1d6c3f8ee8?auto=format&fit=crop&w=600&q=80" alt="Masala Dosa" loading="lazy" class="rounded-lg mb-4 w-full h-48 object-cover" />
+                    <h4 class="text-2xl font-semibold mb-2">Masala Dosa</h4>
+                    <p class="text-gray-600 mb-4">Crispy fermented rice and lentil crepe filled with spiced potato masala, served with sambar and chutneys.</p>
+                    <p class="font-bold text-green-700 text-xl">₹120</p>
+                    <button data-dish="Masala Dosa" data-price="120" class="add-to-cart mt-4 w-full bg-green-700 text-white py-3 rounded-lg hover:bg-green-800 transition font-semibold focus:outline-none focus:ring-2 focus:ring-green-600" aria-label="Add Masala Dosa to cart">
+                        Add to Cart
+                    </button>
+                </article>
+
+                <article class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+                    <img src="https://images.unsplash.com/photo-1543353071-087092ec3937?auto=format&fit=crop&w=600&q=80" alt="Vegetable Upma" loading="lazy" class="rounded-lg mb-4 w-full h-48 object-cover" />
+                    <h4 class="text-2xl font-semibold mb-2">Vegetable Upma</h4>
+                    <p class="text-gray-600 mb-4">Savory semolina porridge cooked with fresh vegetables and subtle spices, perfect for a light meal.</p>
+                    <p class="font-bold text-green-700 text-xl">₹70</p>
+                    <button data-dish="Vegetable Upma" data-price="70" class="add-to-cart mt-4 w-full bg-green-700 text-white py-3 rounded-lg hover:bg-green-800 transition font-semibold focus:outline-none focus:ring-2 focus:ring-green-600" aria-label="Add Vegetable Upma to cart">
+                        Add to Cart
+                    </button>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Section -->
+    <section id="order" class="max-w-4xl mx-auto px-6 py-20">
+        <h3 class="text-4xl font-extrabold text-center text-green-700 mb-12">Your Order</h3>
+        <div id="cart-container" class="bg-white rounded-xl shadow-md p-8">
+            <p id="empty-cart-msg" class="text-center text-gray-500">Your cart is empty. Add delicious dishes from the menu above.</p>
+            <ul id="cart-items" class="divide-y divide-gray-200 mb-6 hidden" aria-live="polite"></ul>
+            <div id="cart-summary" class="flex justify-between items-center font-semibold text-lg mb-6 hidden">
+                <span>Total:</span>
+                <span id="cart-total">₹0</span>
+            </div>
+            <button id="checkout-btn" disabled class="w-full bg-green-700 text-white py-3 rounded-lg font-semibold hover:bg-green-800 transition disabled:opacity-50 disabled:cursor-not-allowed">
+                Proceed to Checkout
+            </button>
+        </div>
+    </section>
+
+    <!-- Payment Modal -->
+    <div id="payment-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50" aria-modal="true" role="dialog" aria-labelledby="payment-modal-title">
+      <div class="bg-white rounded-xl shadow-lg w-full max-w-md p-8 relative">
+        <button id="close-payment" aria-label="Close payment form" class="absolute top-4 right-4 text-gray-600 hover:text-gray-900 text-3xl font-bold leading-none">&times;</button>
+        <h4 id="payment-modal-title" class="text-2xl font-extrabold text-green-700 mb-6 text-center">Complete Your Payment</h4>
+        <form id="payment-form" class="space-y-6" aria-label="Payment form">
+          <div>
+            <label for="card-name" class="block text-gray-700 font-bold mb-2">Name on Card</label>
+            <input type="text" id="card-name" name="cardName" required aria-required="true" class="w-full border-2 rounded-lg px-4 py-2 focus:border-green-700 outline-none" autocomplete="cc-name" />
+          </div>
+          <div>
+            <label for="card-number" class="block text-gray-700 font-bold mb-2">Card Number</label>
+            <input type="text" id="card-number" name="cardNumber" required aria-required="true" maxlength="19" placeholder="1234 5678 9012 3456" class="w-full border-2 rounded-lg px-4 py-2 focus:border-green-700 outline-none" autocomplete="cc-number" inputmode="numeric" />
+          </div>
+          <div class="flex gap-4">
+            <div class="flex-1">
+              <label for="expiry" class="block text-gray-700 font-bold mb-2">Expiry (MM/YY)</label>
+              <input type="text" id="expiry" name="expiry" required aria-required="true" maxlength="5" placeholder="MM/YY" class="w-full border-2 rounded-lg px-4 py-2 focus:border-green-700 outline-none" autocomplete="cc-exp" />
+            </div>
+            <div class="flex-1">
+              <label for="cvv" class="block text-gray-700 font-bold mb-2">CVV</label>
+              <input type="password" id="cvv" name="cvv" required aria-required="true" maxlength="4" placeholder="123" class="w-full border-2 rounded-lg px-4 py-2 focus:border-green-700 outline-none" autocomplete="cc-csc" inputmode="numeric" />
+            </div>
+          </div>
+          <div class="text-center">
+            <button type="submit" id="pay-now" class="w-full bg-green-700 text-white py-3 rounded-lg font-semibold hover:bg-green-800 transition focus:outline-none focus:ring-2 focus:ring-green-600">
+              Pay Now
+            </button>
+          </div>
+          <p id="payment-error" class="text-red-600 mt-2 text-center hidden" role="alert" aria-live="assertive"></p>
+        </form>
+      </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-green-50 py-20 px-6">
+        <div class="max-w-3xl mx-auto">
+            <h3 class="text-4xl font-extrabold text-center text-green-700 mb-8">Get In Touch</h3>
+            <form id="contact-form" class="bg-white p-8 rounded-xl shadow-md" aria-label="Contact form">
+                <div class="mb-6">
+                    <label for="name" class="block text-gray-700 font-bold mb-2">Name</label>
+                    <input type="text" id="name" name="name" required aria-required="true" class="w-full border-2 rounded-lg px-4 py-2 focus:border-green-700 outline-none" />
+                </div>
+                <div class="mb-6">
+                    <label for="email" class="block text-gray-700 font-bold mb-2">Email</label>
+                    <input type="email" id="email" name="email" required aria-required="true" class="w-full border-2 rounded-lg px-4 py-2 focus:border-green-700 outline-none" />
+                </div>
+                <div class="mb-6">
+                    <label for="message" class="block text-gray-700 font-bold mb-2">Message</label>
+                    <textarea id="message" name="message" required aria-required="true" rows="5" class="w-full border-2 rounded-lg px-4 py-2 focus:border-green-700 outline-none"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-green-700 text-white py-3 rounded-lg hover:bg-green-800 font-bold transition focus:outline-none focus:ring-2 focus:ring-green-600" aria-live="polite">
+                    Send Message
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-green-700 text-white py-12 px-6 mt-20">
+        <div class="max-w-7xl mx-auto text-center">
+            <p>&copy; 2024 HomeFood. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+      // Mobile menu toggle
+      const menuBtn = document.getElementById('menu-btn');
+      const menu = document.getElementById('menu');
+      menuBtn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+      });
+
+      // Cart functionality
+      const cart = [];
+      const cartItemsContainer = document.getElementById('cart-items');
+      const cartTotalElem = document.getElementById('cart-total');
+      const emptyCartMsg = document.getElementById('empty-cart-msg');
+      const checkoutBtn = document.getElementById('checkout-btn');
+
+      // Add to cart buttons
+      document.querySelectorAll('.add-to-cart').forEach(button => {
+        button.addEventListener('click', () => {
+          const dish = button.dataset.dish;
+          const price = Number(button.dataset.price);
+
+          // Check if dish already in cart
+          const existingItem = cart.find(item => item.dish === dish);
+          if (existingItem) {
+            existingItem.quantity += 1;
+          } else {
+            cart.push({ dish, price, quantity: 1 });
+          }
+          renderCart();
+        });
+      });
+
+      // Render cart items
+      const renderCart = () => {
+        cartItemsContainer.innerHTML = '';
+        if (cart.length === 0) {
+          emptyCartMsg.classList.remove('hidden');
+          cartItemsContainer.classList.add('hidden');
+          checkoutBtn.disabled = true;
+          checkoutBtn.classList.add('disabled');
+          document.getElementById('cart-summary').classList.add('hidden');
+          return;
+        }
+
+        emptyCartMsg.classList.add('hidden');
+        cartItemsContainer.classList.remove('hidden');
+        checkoutBtn.disabled = false;
+        checkoutBtn.classList.remove('disabled');
+        document.getElementById('cart-summary').classList.remove('hidden');
+
+        cart.forEach((item, index) => {
+          const li = document.createElement('li');
+          li.className = 'flex justify-between items-center py-4';
+          li.innerHTML = `
+            <div class="flex-1">
+              <p class="font-semibold text-green-900">${item.dish}</p>
+              <p class="text-gray-600">₹${item.price} x ${item.quantity}</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <button aria-label="Decrease quantity" class="text-green-700 font-bold px-3 py-1 rounded hover:bg-green-100 transition" data-action="decrease" data-index="${index}">-</button>
+              <span class="w-6 text-center">${item.quantity}</span>
+              <button aria-label="Increase quantity" class="text-green-700 font-bold px-3 py-1 rounded hover:bg-green-100 transition" data-action="increase" data-index="${index}">+</button>
+              <button aria-label="Remove item" class="text-red-600 font-bold px-3 py-1 rounded hover:bg-red-100 transition" data-action="remove" data-index="${index}">×</button>
+            </div>
+          `;
+          cartItemsContainer.appendChild(li);
+        });
+
+        const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+        cartTotalElem.textContent = `₹${total}`;
+      };
+
+      // Cart buttons event delegation
+      cartItemsContainer.addEventListener('click', e => {
+        const btn = e.target.closest('button');
+        if (!btn) return;
+        const action = btn.dataset.action;
+        const index = Number(btn.dataset.index);
+
+        if (action === 'increase') {
+          cart[index].quantity += 1;
+        } else if (action === 'decrease') {
+          if (cart[index].quantity > 1) {
+            cart[index].quantity -= 1;
+          }
+        } else if (action === 'remove') {
+          cart.splice(index, 1);
+        }
+        renderCart();
+      });
+
+      renderCart();
+
+      // Checkout button opens payment modal
+      const paymentModal = document.getElementById('payment-modal');
+      const closePaymentBtn = document.getElementById('close-payment');
+      const paymentForm = document.getElementById('payment-form');
+      const paymentError = document.getElementById('payment-error');
+
+      checkoutBtn.addEventListener('click', () => {
+        paymentError.classList.add('hidden');
+        paymentForm.reset();
+        paymentModal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+        document.getElementById('card-name').focus();
+      });
+
+      closePaymentBtn.addEventListener('click', () => {
+        paymentModal.classList.add('hidden');
+        document.body.style.overflow = 'auto';
+      });
+
+      // Close modal on overlay click
+      paymentModal.addEventListener('click', e => {
+        if (e.target === paymentModal) {
+          paymentModal.classList.add('hidden');
+          document.body.style.overflow = 'auto';
+        }
+      });
+
+      // Basic card validation helpers
+      const validateCardNumber = (number) => {
+        // Remove spaces
+        const num = number.replace(/\s+/g, '');
+        // Basic numeric check and length between 13-19
+        return /^\d{13,19}$/.test(num);
+      };
+
+      const validateExpiry = (expiry) => {
+        if (!/^\d{2}\/\d{2}$/.test(expiry)) return false;
+        const [monthStr, yearStr] = expiry.split('/');
+        const month = parseInt(monthStr, 10);
+        let year = parseInt(yearStr, 10);
+        if (month < 1 || month > 12) return false;
+        // Convert 2-digit year to 4-digit
+        year += 2000;
+        const now = new Date();
+        const expiryDate = new Date(year, month);
+        return expiryDate > now;
+      };
+
+      const validateCVV = (cvv) => {
+        return /^\d{3,4}$/.test(cvv);
+      };
+
+      // Payment form submission
+      paymentForm.addEventListener('submit', e => {
+        e.preventDefault();
+        paymentError.classList.add('hidden');
+
+        const cardName = paymentForm['cardName'].value.trim();
+        const cardNumber = paymentForm['cardNumber'].value.trim();
+        const expiry = paymentForm['expiry'].value.trim();
+        const cvv = paymentForm['cvv'].value.trim();
+
+        if (!cardName || !cardNumber || !expiry || !cvv) {
+          paymentError.textContent = 'Please fill in all payment fields.';
+          paymentError.classList.remove('hidden');
+          return;
+        }
+
+        if (!validateCardNumber(cardNumber)) {
+          paymentError.textContent = 'Please enter a valid card number.';
+          paymentError.classList.remove('hidden');
+          return;
+        }
+
+        if (!validateExpiry(expiry)) {
+          paymentError.textContent = 'Please enter a valid expiry date.';
+          paymentError.classList.remove('hidden');
+          return;
+        }
+
+        if (!validateCVV(cvv)) {
+          paymentError.textContent = 'Please enter a valid CVV.';
+          paymentError.classList.remove('hidden');
+          return;
+        }
+
+        // Disable pay button and show loading
+        const payBtn = document.getElementById('pay-now');
+        payBtn.disabled = true;
+        payBtn.textContent = 'Processing...';
+
+        // Simulate payment processing delay
+        setTimeout(() => {
+          // Normally here you would send payment data to server securely
+          alert('Payment successful! Thank you for your order.');
+          cart.length = 0; // Clear cart
+          renderCart();
+          paymentModal.classList.add('hidden');
+          document.body.style.overflow = 'auto';
+          payBtn.disabled = false;
+          payBtn.textContent = 'Pay Now';
+        }, 2000);
+      });
+
+      // Contact form submission with validation and feedback
+      const contactForm = document.getElementById('contact-form');
+      contactForm.addEventListener('submit', e => {
+        e.preventDefault();
+
+        const name = contactForm.name.value.trim();
+        const email = contactForm.email.value.trim();
+        const message = contactForm.message.value.trim();
+
+        if (!name || !email || !message) {
+          alert('Please fill out all fields.');
+          return;
+        }
+
+        // Simple email regex validation
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(email)) {
+          alert('Please enter a valid email address.');
+          return;
+        }
+
+        // Simulate sending
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending...';
+
+        setTimeout(() => {
+          alert('Thank you for contacting HomeFood! We will get back to you shortly.');
+          contactForm.reset();
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Send Message';
+        }, 1500);
+      });
+    </script>
+</body>
+</html>

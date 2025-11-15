@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1"><title>Cart</title><link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"></head>
+<body>
+<header class="header"><h1>Sweet Bites</h1></header>
+<main class="container"><h2>Your Cart</h2>
+{% if cart_items %}
+<form method="post" action="{{ url_for('update_cart') }}">
+  <table class="cart-table">
+    <thead><tr><th>Item</th><th>Qty</th><th>Price</th><th>Total</th></tr></thead>
+    <tbody>
+      {% for it in cart_items %}
+      <tr>
+        <td>{{ it.cake.name }}</td>
+        <td><input name="qty_{{ it.cake.id }}" type="number" min="0" value="{{ it.qty }}"></td>
+        <td>₹{{ it.cake.price }}</td>
+        <td>₹{{ it.item_total }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <p class="total">Subtotal: ₹{{ total }}</p>
+  <div class="cart-actions">
+    <button type="submit" class="muted">Update cart</button>
+    <a class="primary" href="{{ url_for('checkout') }}">Proceed to Checkout</a>
+  </div>
+</form>
+{% else %}
+  <p>Your cart is empty. <a href="{{ url_for('index') }}">Shop cakes</a></p>
+{% endif %}
+</main>
+</body>
+</html>
