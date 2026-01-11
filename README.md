@@ -88,8 +88,8 @@ Agentic-AI-Website-Builder/
 Edit `AI-web-builder.py` to customize default templates, output folder name, or model parameters (e.g., prompt temperature, OpenAI model version).
 
 
-© 2025 Jujare jujare
-GitHub: [Naresh-4ai](https://github.com/Naresh-4ai)
+
+
 
 
 
